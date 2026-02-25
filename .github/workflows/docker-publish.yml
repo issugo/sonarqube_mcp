@@ -10,6 +10,9 @@ jobs:
     name: docker
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+    
       - name: Read VERSION file
         id: getversion
         run: echo "version=$(cat version)" >> $GITHUB_OUTPUT
